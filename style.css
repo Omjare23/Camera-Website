@@ -10,7 +10,7 @@
     background-size: cover;
 }
 
-.btn_one{
+.btn_one i{
     color: #fff;
     font-size: 30px;
     font-weight: 700;
@@ -18,14 +18,17 @@
     left: 16px;
     line-height: 60px;
     cursor: pointer;
+    transition: all 0.1s linear;
 }
 
 .sidebar_menu{
     position: fixed;
     height: 100vh;
     width: 300px;
+    left: -350px;
     background-color: rgba(255,255,255,0.1);
     box-shadow: 0 0 6px rgba(255,255,255,0.5);
+    transition: all 0.2s linear;
 }
 
 .sidebar_menu .logo{
@@ -37,21 +40,24 @@
 
 .sidebar_menu .logo a{
     position: absolute;
-    left: 60px;
+    left: 10px;
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    padding-top: 3px;
+    font-size: 40px;
     font-weight: 400;
 }
 
 .sidebar_menu .btn_two i{
     color: gray;
-    font-size: 700;
+    font-size: 30px;
     line-height: 60px;
     position: absolute;
-    left: 270px;
-    /* opacity: 0; */
+    left: 266px;
+    padding-top: 6px;
+    opacity: 0;
     cursor: pointer;
+    transition: all 0.1s linear;
 }
 
 .sidebar_menu .menu{
@@ -99,14 +105,26 @@
 }
 
 .btn_one i:hover{
-    font-size: 40px;
+    font-size: 33px;
 }
 
 .btn_two i:hover{
-    font-size: 30px;
+    font-size: 33px;
 }
 
 .sidebar_menu .social_media i:hover{
     opacity: 1;
     scale: 1.2;
+}
+
+#check:checked ~ .sidebar_menu{
+    left: 0px;
+}
+
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
 }
